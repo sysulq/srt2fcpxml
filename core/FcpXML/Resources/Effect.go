@@ -15,3 +15,12 @@ func NewEffect() *Effect {
 		Uid:  ".../Titles.localized/Bumper:Opener.localized/Basic Title.localized/Basic Title.moti",
 	}
 }
+
+func NewBackGroundEffect() *Effect {
+	return &Effect{
+		Text: "",
+		ID:   "r2",
+		Name: "自适应背景",
+		Uid:  "~/Titles.localized/自适应背景/自适应背景.moti",
+	}
+}

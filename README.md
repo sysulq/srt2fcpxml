@@ -14,6 +14,8 @@ srt 字幕文件转为final cut pro 字幕文件(fcpxml)
 go install github.com/hnlq715/srt2fcpxml
 ```
 
+复制`自适应背景.moti`文件到`~/Motion Templates/Titles`目录下
+
 ## Use
 
 ```bash

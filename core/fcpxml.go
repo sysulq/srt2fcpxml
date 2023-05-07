@@ -19,7 +19,7 @@ import (
 func Srt2FcpXmlExport(projectName string, frameDuration interface{}, subtitles *astisub.Subtitles, width, height int) ([]byte, error) {
 	fcpxml := FcpXML.New()
 	res := Resources.NewResources()
-	res.SetEffect(Resources.NewEffect())
+	res.SetEffect(Resources.NewBackGroundEffect())
 	format := Resources.NewFormat().
 		SetWidth(width).
 		SetHeight(height).
@@ -41,6 +41,10 @@ func Srt2FcpXmlExport(projectName string, frameDuration interface{}, subtitles *
 		title.AddParam(Title.NewParams("Position", "9999/999166631/999166633/1/100/101", "0 -450"))
 		title.AddParam(Title.NewParams("Alignment", "9999/999166631/999166633/2/354/999169573/401", "1 (Center)"))
 		title.AddParam(Title.NewParams("Flatten", "9999/999166631/999166633/2/351", "1"))
+		title.AddParam(Title.NewParams("Build In", "9999/10000/2/101", "0"))
+		title.AddParam(Title.NewParams("Build Out", "9999/10000/2/102", "0"))
+		title.AddParam(Title.NewParams("ScaleY", "9999/1825768479/100/1825768480/2/100", "0"))
+		title.AddParam(Title.NewParams("Opacity", "9999/1825768325/10003/10045/1/200/202", "0.7"))
 		gap.AddTitle(title)
 	}
 

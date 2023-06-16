@@ -35,7 +35,7 @@ func Srt2FcpXmlExport(projectName string, frameDuration interface{}, subtitles *
 			for _, l := range lines {
 				os = append(os, l.String())
 			}
-			return strings.Join(os, "\n")
+			return strings.Trim(strings.Join(os, "\n"), "\n")
 		}(item.Lines))
 		title := Title.NewTitle(item.String(), item.StartAt.Seconds(), item.EndAt.Seconds()).SetTextStyleDef(textStyleDef).SetText(text)
 		title.AddParam(Title.NewParams("Position", "9999/999166631/999166633/1/100/101", "0 -450"))
